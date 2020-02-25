@@ -87,7 +87,7 @@ const validate = values => {
   return errors
 }
 
-const MaterialUiForm = ({ handleSubmit }) => {
+const CustomerForm = ({ handleSubmit }) => {
   const product = useSelector(state => state.cart.product);
   const total = useMemo(
     () => format(product.reduce((acc, item) => acc + (item.price * item.quantity), 0)), 
@@ -158,6 +158,6 @@ const MaterialUiForm = ({ handleSubmit }) => {
 }
 
 export default reduxForm({
-  form: 'MaterialUiForm',
+  form: 'CustomerForm',
   validate,
-})(MaterialUiForm)
+})(CustomerForm)
