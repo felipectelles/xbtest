@@ -111,7 +111,10 @@ export default function ProductItem({product}) {
             color="textSecondary">
             {format(product.price*.9)} à vista (10% de desconto)
           </Typography>
-          <Collapse in={selected}>
+          <Collapse
+            in={selected}
+            {...(selected ? { timeout: 800 } : {})}
+          >
             <Box>
               <NumberCounter
                 counter={counter}
