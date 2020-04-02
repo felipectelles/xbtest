@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from "react-redux";
+import Collapse from '@material-ui/core/Collapse';
 import {
   Box,
   Grid,
@@ -110,7 +111,7 @@ export default function ProductItem({product}) {
             color="textSecondary">
             {format(product.price*.9)} à vista (10% de desconto)
           </Typography>
-          {selected ? 
+          <Collapse in={selected}>
             <Box>
               <NumberCounter
                 counter={counter}
@@ -124,7 +125,8 @@ export default function ProductItem({product}) {
                 variant="contained" >
                 Adicionar
               </Button>
-            </Box> : null}
+            </Box>
+          </Collapse>
         </Grid>
       </Paper>
     </Grid>
