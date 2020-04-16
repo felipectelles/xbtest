@@ -1,5 +1,3 @@
-# Teste para vaga Front-End
-
 ## Regras
 
 * Deve-se utilizar obrigatóriamente os seguintes recursos: [material-ui](https://material-ui.com/), [reactjs](https://reactjs.org/), [redux](https://redux.js.org/), [redux-form](https://redux-form.com) e [react-router](https://github.com/ReactTraining/react-router), além destes, é permitido utilizar qualquer outra biblioteca.
